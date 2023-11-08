@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Audio player</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <script type="text/javascript" src="assets/js/main.js"></script>
+    </head>
+    <body onload="loadElements()">
+        <header th:replace="~{layout/template :: header}"/>
+        <aside th:replace="~{layout/template :: aside}"/>
+
+        <section>
+            <div onclick="redirect('artist?id=1')">
+                <img src="assets/media/artists/208x208bb.webp" class="artist">
+            </div>
+        </section>
+    </body>
+</html>

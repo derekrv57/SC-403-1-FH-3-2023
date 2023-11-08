@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Audio player</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <script type="text/javascript" src="assets/js/main.js"></script>
+    </head>
+    <body onload="loadElements()">
+        <header th:replace="~{layout/template :: header}"/>
+        <aside th:replace="~{layout/template :: aside}"/>
+
+        <section>
+            <div class="header">
+                <img src="assets/media/albums/example-album/be1496e46e6c017d6d6541c7664ec325.jpg" class="artwork">
+                <h1>25 Concierto Conmemorativo (2011)</h1>
+            </div>
+            <div class="content">
+                <table>
+                    <tr>
+                        <td onclick="play(0)"> Preludio Conmemorativo<audio id="Preludio Conmemorativo"><source src="assets/media/albums/example-album/01 - Preludio Conmemorativo.wav" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                        <td onclick="play(1)"> Canción a Dios<audio id="Canción a Dios"><source src="assets/media/albums/example-album/02 - Canción a Dios.wav" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                        <td onclick="play(2)"> Motivo de mi canción<audio id="Motivo de mi canción"><source src="assets/media/albums/example-album/03 - Motivo de mi canción.wav" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                        <td onclick="play(3)"> Es por ti<audio id="Es por ti"><source src="assets/media/albums/example-album/04 - Es por ti.wav" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                        <td onclick="play(4)"> Te amo<audio id="Te amo"><source src="assets/media/albums/example-album/05 - Te amo.wav" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                        <td onclick="play(5)"> Cuán bello es el Señor<audio id="Cuán bello es el Señor"><source src="assets/media/albums/example-album/06 - Cuán bello es el Señor.wav" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                        <td onclick="play(6)"> Has cambiado mi lamento<audio id="Has cambiado mi lamento"><source src="assets/media/albums/example-album/07 - Has cambiado mi lamento.wav" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                        <td onclick="play(7)"> Un adorador<audio id="Un adorador"><source src="assets/media/albums/example-album/08 - Un adorador.wav" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                        <td onclick="play(8)"> Será llena la tierra<audio id="Será llena la tierra"><source src="assets/media/albums/example-album/09 - Será llena la tierra.wav" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                        <td onclick="play(9)"> Dios ha sido fiel<audio id="Dios ha sido fiel"><source src="assets/media/albums/example-album/10 - Dios ha sido fiel.wav" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                        <td onclick="play(10)"> Tu fidelidad<audio id="Tu fidelidad"><source src="assets/media/albums/example-album/11 - Tu fidelidad.wav" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                        <td onclick="play(11)"> Fiel<audio id="Fiel"><source src="assets/media/albums/example-album/12 - Fiel.wav" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                        <td onclick="play(12)"> Dios ha sido fiel (reprise)<audio id="Dios ha sido fiel (reprise)"><source src="assets/media/albums/example-album/13 - Dios ha sido fiel (reprise).wav" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                        <td onclick="play(13)"> Se oye en la naciones<audio id="Se oye en la naciones"><source src="assets/media/albums/example-album/14 - Se oye en la naciones.wav" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                        <td onclick="play(14)"> Levántate<audio id="Levántate"><source src="assets/media/albums/example-album/15 - Levántate.wav" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                        <td onclick="play(15)"> Poderoso<audio id="Poderoso"><source src="assets/media/albums/example-album/16 - Poderoso.wav" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                        <td onclick="play(16)"> Aleluya a nuestro Dios<audio id="Aleluya a nuestro Dios"><source src="assets/media/albums/example-album/17 - Aleluya a nuestro Dios.wav" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                        <td onclick="play(17)"> Cristo es mi Señor<audio id="Cristo es mi Señor"><source src="assets/media/albums/example-album/18 - Cristo es mi Señor.wav" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                        <td onclick="play(18)"> Tú harás<audio id="Tú harás"><source src="assets/media/albums/example-album/19 - Tú harás.wav" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                        <td onclick="play(19)"> En los montes, en los valles<audio id="En los montes, en los valles"><source src="assets/media/albums/example-album/20 - En los montes, en los valles.wav" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                        <td onclick="play(20)"> Renuévame<audio id="Renuévame"><source src="assets/media/albums/example-album/21 - Renuévame.wav" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                        <td onclick="play(21)"> Tu amor por mí<audio id="Tu amor por mí"><source src="assets/media/albums/example-album/22 - Tu amor por mí.wav" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                        <td onclick="play(22)"> Yo te busco<audio id="Yo te busco"><source src="assets/media/albums/example-album/23 - Yo te busco.wav" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                        <td onclick="play(23)"> Temprano yo te buscaré<audio id="Temprano yo te buscaré"><source src="assets/media/albums/example-album/24 - Temprano yo te buscaré.wav" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                        <td onclick="play(24)"> Tu mirada<audio id="Tu mirada"><source src="assets/media/albums/example-album/25 - Tu mirada.wav" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                        <td onclick="play(25)"> Hermoso eres<audio id="Hermoso eres"><source src="assets/media/albums/example-album/26 - Hermoso eres.wav" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                        <td onclick="play(26)"> Exáltate<audio id="Exáltate"><source src="assets/media/albums/example-album/27 - Exáltate.wav" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                        <td onclick="play(27)"> Mas el Dios de toda gracia<audio id="Mas el Dios de toda gracia"><source src="assets/media/albums/example-album/28 - Mas el Dios de toda gracia.wav" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                        <td onclick="play(28)"> Dios de pactos<audio id="Dios de pactos"><source src="assets/media/albums/example-album/29 - Dios de pactos.wav" type="audio/wav"></audio></td>
+                      </tr>
+                      <tr>
+                        <td onclick="play(29)"> Gracias<audio id="Gracias"><source src="assets/media/albums/example-album/30 - Gracias.wav" type="audio/wav"></audio></td>
+                      </tr>
+                </table>
+            </div>
+        </section>
+    </body>
+</html>

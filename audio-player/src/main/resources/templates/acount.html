@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Audio player</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <script type="text/javascript" src="assets/js/main.js"></script>
+    </head>
+    <body onload="loadElements()">
+        <header th:replace="~{layout/template :: header}"/>
+        <aside th:replace="~{layout/template :: aside}"/>
+
+        <section>
+            <div class="header">
+                <img src="assets/img/user.svg" class="imgAcountProfile">
+                <h1>Pepe Botellas</h1>
+            </div>
+            <div class="content">
+                <button class="button" onclick="redirect('login')">Logout</button>
+            </div>
+        </section>
+    </body>
+</html>
