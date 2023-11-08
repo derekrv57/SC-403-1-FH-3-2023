@@ -1,0 +1,188 @@
+*{
+	color: white;
+}
+
+body{
+	background-color: #1f1f1f;
+}
+
+header{
+	display: flex;
+	background-color: #292928;
+	height: 55px;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+hr {
+  border-color: #292928;
+}
+
+.control{
+	width: 35px;
+	height: 35px;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+}
+
+.control:hover {
+	background-color: #5b5b5a;
+	border: 0px solid;
+	border-radius: 5px;
+}
+
+.icon{
+	width: 35px;
+	height: 35px;
+}
+
+.player{
+	display: flex;
+	margin-left: 2%;
+	margin-right: 2%;
+	width: 65%;
+	height: 100%;
+	background-color: #555555;
+	border-radius: 5px;
+}
+
+.player-data{
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+#artwork{
+	width: 55px;
+	height: 55px;
+	border-radius: 5px;
+}
+
+.volume{
+	display: flex;
+	height: 55px;
+	width: 75px;
+	align-items: center;
+}
+
+aside{
+	position: fixed;
+	width: 300px;
+	height: 100%;
+	border-right: 5px solid #292928; 
+}
+
+.txtSearch{
+	margin-top: 10px;
+	width: 280px;
+	height: 35px;
+	background-color: #1a1a1b;
+	border-radius: 5px;
+}
+
+.btnMenu{
+	display: flex;
+	width: 280px;
+  	vertical-align: middle;
+  	margin: 5px;
+  	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+}
+
+.btnMenu:hover {
+	background-color: #5b5b5a;
+	border: 0px solid;
+	border-radius: 5px;
+}
+
+.selected{
+	background-color: #592e36;
+	border: 0px solid;
+	border-radius: 5px;
+}
+
+.imgMenu{
+	margin-top: 5px;
+	margin-right: 5px;
+	width: 30px;
+	height: 30px;
+}
+
+section{
+	position: fixed;
+	margin-left: 310px;
+	margin-top: 10px;
+	display: block;
+	width: 80%;
+}
+
+.header{
+	display: flex;
+	width: 100%;
+}
+
+.content{
+	display: flex;
+	width: 100%;
+}
+
+.album{
+	cursor: pointer;
+}
+
+.artwork{
+	width: 150px;
+	height: 150px;
+	border-radius: 10px;
+}
+
+table{
+	width: 100%;
+}
+
+tr{
+	display: flex;
+	align-items: center;
+	background-color: #5b5b5a;
+	border-radius: 5px;
+	width: 100%;
+	height: 35px;
+	margin: 5px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.artist{
+	border-radius: 100%;
+	cursor: pointer;
+}
+
+.imgAcount{
+	border-radius: 100%;
+	background-color: #272726;
+}
+
+.imgAcountProfile{
+	width: 150px;
+	height: 150px;
+	border-radius: 100%;
+	background-color: #272726;
+}
+
+.button{
+	margin: 15px;
+	font-size: 30px;
+	height: auto;
+	border-radius: 15px;
+	background-color: #ae343d;
+	cursor: pointer;
+}

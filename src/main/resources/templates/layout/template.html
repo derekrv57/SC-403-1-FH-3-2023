@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+	<title>Audio player</title>
+	<meta charset="UTF-8"/>
+	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+	<link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+	<link th:href="@{/webjars/font-awesome/css/all.css}" rel="stylesheet"/>
+	<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+	<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+	<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+        <script src="/assets/js/rutinas.js"></script>
+</head>
+<body>
+<header th:fragment="header">
+	<button id="btnBackward" class="control" onclick="back()"><img src="assets/img/backward.svg" class="icon"></button>
+            <button id="btnPlay" class="control" onclick="playpause()"><img src="assets/img/play.svg" id="imgPlay" class="icon"></button>
+            <button id="btnForward" class="control" onclick="next()"><img src="assets/img/forward.svg" class="icon"></button>
+            <div class="player">
+                <img src="assets/img/MissingArtwork.svg" id="artwork">
+                    <div class="player-data">
+                        <h1 id="lblSong">Nothing playing</h1>
+                        <h2 id="lblAlbum"></h2>
+                    </div>
+            </div>
+            <div class="volume">
+                <img src="assets/img/volume.svg" class="icon">
+                <input type="range" step="0.01" min="0" max="1" title="0.00 dBFS">
+            </div>
+</header>
+
+<aside th:fragment="aside">
+    <div class="menu">
+        <form action="search">
+            <input type="text" name="search" autocomplete="off" placeholder="Search" class="txtSearch">
+        </form>
+
+        <hr>
+            <button class="btnMenu selected" onclick="redirect('/')">
+                <img src="assets/img/home.svg" style="filter: invert(100%);" class="imgMenu">
+                    <p>Home</p>
+            </button>
+
+        <hr>
+        <p>Library</p>
+        <button class="btnMenu" onclick="redirect('song')">
+            <img src="assets/img/music.svg" style="filter: invert(100%); "class="imgMenu">
+                <p>Songs</p>
+        </button>
+        <button class="btnMenu" onclick="redirect('album?id=1')">
+            <img src="assets/img/list.svg" class="imgMenu">
+                <p>Albums</p>
+        </button> 
+        <button class="btnMenu" onclick="redirect('artist')">
+            <img src="assets/img/user.svg" style="filter: invert(100%);" class="imgMenu">
+                <p>Artists</p>
+        </button> 
+
+        <hr>
+            <p>Playlists</p>
+            <button class="btnMenu" onclick="redirect('playlist')">
+                <img src="assets/img/folder.svg" style="filter: invert(100%);" class="imgMenu">
+                    <p>Example playlist</p>
+            </button>
+
+        <hr>
+        <p>Acount</p>
+        <button class="btnMenu" onclick="redirect('acount')">
+            <img src="assets/img/user.svg" class="imgMenu imgAcount">
+                <p>Pepe Botellas</p>
+        </button>
+    </div>
+</aside>    
+
+<footer th:fragment="footer">
+
+</footer>
+</body>
+</html>

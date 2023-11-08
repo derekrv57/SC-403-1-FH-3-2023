@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Audio player</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <script type="text/javascript" src="assets/js/main.js"></script>
+    </head>
+    <body onload="loadElements()">
+        
+        <header th:replace="~{layout/template :: header}"/>
+        <aside th:replace="~{layout/template :: aside}"/>
+        
+        <section>
+            <div class="header">
+                <h1>Playlists & albums</h1>
+            </div>
+            <div class="content">
+                <div class="album" onclick="redirect('album?id=1')">
+                    <img src="assets/media/albums/example-album/be1496e46e6c017d6d6541c7664ec325.jpg" class="artwork">
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
