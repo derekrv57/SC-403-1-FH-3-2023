@@ -9,18 +9,30 @@ package com.audio.player.domain;
  * @author jorge
  */
 
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+
 
 @Entity
 public class Cancion {
+
+    @Id
+    private Integer IDCanción;
+    private String Nombre;
+    private String Dir;
+
+    @ManyToOne
+    @JoinColumn(name = "IDÁlbum", nullable = false)
+    private album album;
 
     @Id
     private int IDCancion;
     private String nombre; // Cambié a mayúscula
     private String dir;    // Cambié a mayúscula
     private int IDÁlbum;
-
     // Getters y setters
     public int getIDCancion() {
         return IDCancion;
