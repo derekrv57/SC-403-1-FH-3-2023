@@ -16,7 +16,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
-
 @Configuration
 @EnableWebSecurity
 public class ProjectConfig {
@@ -25,12 +24,12 @@ public class ProjectConfig {
     public UserDetailsService users() {
         UserDetails admin = User.builder()
                 .username("ADMIN")
-                .password("$2a$10$S2m5ZHyI68/Z3JGF6B2Jt.0eDk/mr8AfP2kD9YUG0tEl8qFdmuOyC") // BCrypt encoded password
+                .password("$2a$10$S2m5ZHyI68/Z3JGF6B2Jt.0eDk/mr8AfP2kD9YUG0tEl8qFdmuOyC") 
                 .roles("USUARIO", "ADMIN")
                 .build();
         UserDetails artist = User.builder()
                 .username("ARTIST")
-                .password("$2a$10$S2m5ZHyI68/Z3JGF6B2Jt.0eDk/mr8AfP2kD9YUG0tEl8qFdmuOyC") // BCrypt encoded password
+                .password("$2a$10$S2m5ZHyI68/Z3JGF6B2Jt.0eDk/mr8AfP2kD9YUG0tEl8qFdmuOyC") 
                 .roles("USUARIO")
                 .build();
         return new InMemoryUserDetailsManager(artist, admin);
@@ -39,16 +38,17 @@ public class ProjectConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .authorizeRequests((requests) -> requests
-                        .antMatchers("/", "/account/**", "/album/**",
-                                "/artist/**", "/index/**", "/join/**",
-                                "/login/**", "/playlist/**", "/song/**", "/logout/**")
-                        .hasAnyRole("USUARIO", "ADMIN")
-                        .anyRequest().authenticated()
+                .authorizeHttpRequests(authorizeRequests ->
+                        authorizeRequests
+                                .requestMatchers("/", "/account/**", "/album/**",
+                                        "/artist/**", "/index/**", "/join/**",
+                                        "/login/**", "/playlist/**", "/song/**", "/logout/**")
+                                .hasAnyRole("USUARIO", "ADMIN")
+                                .anyRequest().authenticated()
                 )
-                .formLogin((form) -> form
+                .formLogin(formLogin -> formLogin
                         .loginPage("/login").permitAll())
-                .logout((logout) -> logout.permitAll());
+                .logout(logout -> logout.permitAll());
         return http.build();
     }
 
@@ -57,5 +57,11 @@ public class ProjectConfig {
         return new BCryptPasswordEncoder();
     }
 }
+
+
+
+
+
+
 
 
